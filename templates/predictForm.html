@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Soft Landing Page by Tooplate</title>
+	<!--
+
+    Template 2106 Soft Landing
+
+	http://www.tooplate.com/view/2106-soft-landing
+
+    -->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static', filename = 'css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static', filename = 'css/owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static', filename = 'css/owl.theme.default.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static', filename = 'css/font-awesome.min.css')}}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{url_for('static', filename = 'css/tooplate-style.css')}}">
+
+</head>
+<body>
+
+
+
+     <body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand">Performance Predictor</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                         <li><a href="{{url_for('index')}}" class="smoothScroll">Home</a></li>
+                         <li><a href="#feature" class="smoothScroll">Features</a></li>
+                         <li><a href="#about" class="smoothScroll">About us</a></li>
+                         
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#">Say hello - <span>agebea@gmail.com</span></a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- FEATURE -->
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="container">
+                        <form action = "{{url_for('predictor')}}" method="POST" class="align-items-center justify-content-center">
+                          <div>
+                            <div >
+                              <h2 style="color:#29ca8e; text-align: center; font-style: italic;">Enter Students variables</h2>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white" >Mothers Education</label>
+                                <select name = "medu" class="form-control" id="Select">
+                                        <option value="1" selected>Primary Education</option>
+                                        <option value="2">5th - 9th Grade</option>
+                                        <option value="3" selected>Secondary Education</option>
+                                        <option value="4">Higher Education</option>
+                                        
+                                    </select>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white" >Age</label>
+                                  <input type="number" name = "age" class="form-control" placeholder="Enter students Age" required="">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                   <<label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white" >Fathers Education</label>
+                                   <select name = "fedu" class="form-control" id="Select">
+                                        <option value="1" selected>Primary Education</option>
+                                        <option value="2">5th - 9th Grade</option>
+                                        <option value="3" selected>Secondary Education</option>
+                                        <option value="4">Higher Education</option>
+                                        
+                                   </select>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white">Weekly Study Time</label>
+                                    <select name = "stime" class="form-control" id="Select">
+                                        <option value="1" selected>Less than 15 minutes</option>
+                                        <option value="2">15 - 30 minutes</option>
+                                        <option value="3" selected>30minutes - 1hour</option>
+                                        <option value="4" selected>More than 1 hour</option>  
+                                    </select>
+                              </div>
+                            </div >
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                    <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white">Does Student get Family support</label>
+                                    <select name = "fsprt" class="form-control" id="Select">
+                                        <option value="0" selected>No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white">Does Student engage in extracurricular activities?</label>
+                                    <select name = "actv" class="form-control" id="Select">
+                                        <option value="0" selected>No</option>
+                                        <option value="1">Yes</option></select>
+                                  </div>
+                            </div>   
+                            <div  class="form-row">
+                              <div class="form-group col-md-6">
+                                    <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white">Students Free Time after school</label>
+                                    <select name = "ftime" class="form-control" id="Select">
+                                        <option value="1" selected>Very Low</option>
+                                        <option value="2">Low</option>
+                                        <option value="3" selected>Average</option>
+                                        <option value="4" selected>High</option>
+                                        <option value="5" selected>Very High</option>  
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white">How Often does student go out? </label>
+                                    <select name = "gout" class="form-control" id="Select">
+                                        <option value="1" selected>Very Low</option>
+                                        <option value="2">Low</option>
+                                        <option value="3" selected>Average</option>
+                                        <option value="4" selected>High</option>
+                                        <option value="5" selected>Very High</option>  
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                    <label class="form-group row-md-12" for="Select" style="font-weight: bold; color: white;">How often does students drink Alcohol</label>
+                                    <select name = "alc" class="form-control" id="Select" >
+                                        <option value="1" selected>Never</option>
+                                        <option value="2">Sometimes</option>
+                                        <option value="3" selected>Moderately</option>
+                                        <option value="4" selected>Regularly</option>
+                                        <option value="5" selected>Very Much</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-group row-md-6 " for="Select" style="font-weight: bold; color: white">Students Health Status</label>
+                                    <select name = "hstat" class="form-control" id="Select">
+                                        <option value="1" selected>Bad</option>
+                                        <option value="2">Fair</option>
+                                        <option value="3" selected>Average</option>
+                                        <option value="4" selected>Good</option>
+                                        <option value="5" selected>Very Good</option>
+                                    </select>
+                                  </div>
+                            </div>      
+                            
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <button type="submit" class="btn btn-success">Predict</button>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+                         
+                          </div>
+                        </div>
+                        </form>
+                  
+          </div>
+     </section>
+
+
+     
+    
+
+   
+         
+
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="copyright-text col-md-12 col-sm-12">
+                         <div class="col-md-6 col-sm-6">
+                              <p>Copyright &copy; 2018 Company Name - Design: Tooplate</p>
+                         </div>
+
+                         <div class="col-md-6 col-sm-6">
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+ 
+
+
+     <!-- SCRIPTS -->
+     <script src="{{url_for('static',filename = 'js/jquery.js')}}"></script>
+     <script src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static', filename = 'js/jquery.stellar.min.js')}}"></script>
+     <script src="{{url_for('static', filename = 'js/owl.carousel.min.js')}}"></script>
+     <script src="{{url_for('static', filename = 'js/smoothscroll.js')}}"></script>
+     <script src="{{url_for('static', filename = 'js/custom.js')}}"></script>
+
+</body>
+</html>
